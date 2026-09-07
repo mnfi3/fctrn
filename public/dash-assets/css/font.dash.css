@@ -1,0 +1,102 @@
+@font-face{
+    font-family: 'IranSans';
+    font-weight:200;
+    src: url('../fonts/IRANSansWeb200.woff') format('woff');
+}
+@font-face{
+    font-family: 'IranSans';
+    font-weight:300;
+    src: url('../fonts/IRANSansWeb300.woff') format('woff');
+}
+@font-face{
+    font-family: 'IranSans';
+    font-weight:400;
+    src: url('../fonts/IRANSansWeb400.woff') format('woff');
+}
+@font-face{
+    font-family: 'IranSans';
+    font-weight:500;
+    src: url('../fonts/IRANSansWeb500.woff') format('woff');
+}
+@font-face{
+    font-family: 'IranSans';
+    font-weight:600;
+    src: url('../fonts/IRANSansWeb600.woff') format('woff');
+}
+@font-face{
+    font-family: 'IranSans';
+    font-weight:900;
+    src: url('../fonts/IRANSansWeb900.woff') format('woff');
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/iranyekan1.woff') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/iranyekan3.woff') format('woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/iranyekan4.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/iranyekan5.woff') format('woff');
+    font-weight: 300;
+}
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/iranyekan2.woff') format('woff');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('../fonts/Sahel.eot');
+    src: url('../fonts/Sahel.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Sahel.woff2') format('woff2'),
+    url('../fonts/Sahel.woff') format('woff'),
+    url('../fonts/Sahel.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('../fonts/../fonts/Sahel-Bold.eot');
+    src: url('../fonts/../fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/../fonts/Sahel-Bold.woff2') format('woff2'),
+    url('../fonts/../fonts/Sahel-Bold.woff') format('woff'),
+    url('../fonts/../fonts/Sahel-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('../fonts/Sahel-Light.eot');
+    src: url('../fonts/Sahel-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Sahel-Light.woff2') format('woff2'),
+    url('../fonts/Sahel-Light.woff') format('woff'),
+    url('../fonts/Sahel-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('../fonts/Sahel-SemiBold.eot');
+    src: url('../fonts/Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Sahel-SemiBold.woff2') format('woff2'),
+    url('../fonts/Sahel-SemiBold.woff') format('woff'),
+    url('../fonts/Sahel-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+body{
+    font-family: IranYekan !important;
+    line-height: 180%;
+}

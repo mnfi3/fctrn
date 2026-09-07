@@ -1,0 +1,28 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    RewriteRule ^_uploads_/.*\.(php|php5|rb|py|cs|cpp|js)$ - [F,L,NC]
+    RewriteRule ^keys/.*\.(php|php5|rb|py|cs|cpp|js)$ - [F,L,NC]
+    RewriteRule ^uploads/.*\.(php|php5|rb|py|cs|cpp|js)$ - [F,L,NC]
+    RewriteRule ^css/.*\.(php|php5|rb|py|cs|cpp)$ - [F,L,NC]
+    RewriteRule ^docs/.*\.(php|php5|rb|py|cs|cpp|js)$ - [F,L,NC]
+    RewriteRule ^js/.*\.(php|php5|rb|py|cs|cpp)$ - [F,L,NC]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
