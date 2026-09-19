@@ -34,30 +34,31 @@
     <meta name="resource-type" content="document">
     <meta property="place:location:latitude" content="38.079948">
     <meta property="place:location:longitude" content="46.247943">
-    <meta property="business:contact_data:street_address" content="تهران، نصف راه، خیابان ورزش، ">
-    <meta property="business:contact_data:locality" content="تهران">
+    <meta property="business:contact_data:street_address" content="تبریز، نصف راه، خیابان ورزش، ">
+    <meta property="business:contact_data:locality" content="تبریز">
     <meta property="business:contact_data:country_name" content="ایران">
     <meta property="business:contact_data:phone_number" content="+98 41 44444444">
     <meta property="business:contact_data:website" content="{{url('/')}}">
     <meta property="business:contact_data:postal_code" content="16656-66666">
-    <meta property="business:contact_data:email" content="factorfive.ir@gmail.com">
+    <meta property="business:contact_data:email" content="factorin.ir@gmail.com">
     <meta property="og:title" content="نرم افزار واسط ارسال صورتحساب الکترونیکی فاکتورین">
     <meta property="og:description" content="امکان ارسال انواع صورتحساب الکترونیکی نوع اول و نوع دوم به سامانه مؤدیان در سامانه فاکتورین مهیا می باشد. در واقع فاکتورین، رابط شما با سامانه مؤدیان است. ">
     <link property="og:url" href="{{url('/')}}">
     <meta property="og:site_name" content="نرم افزار واسط ارسال صورتحساب الکترونیکی فاکتورین">
     <meta property="storage:tag" content="اتصال به سامانه مودیان مالیاتی، نرم افزار ارسال صورتحساب به سامانه مودیان، نحوه ارسال صورتحساب در سامانه مودیان، صدور صورتحساب الکترونیکی سامانه مودیان، نحوه کار با سامانه مودیان، ثبت فاکتور رسمی در سامانه مودیان، ">
-    <meta property="storage:section" content="factorfive software">
-    <meta property="og:image" content="https://factorfive.com/dash-assets/media/logos/CompLogo.png">
+    <meta property="storage:section" content="factorin software">
+    <meta property="og:image" content="https://factorin.com/dash-assets/media/logos/CompLogo.png">
     <meta name="twitter:card" content="Factor5 Tax Factor software">
     <meta name="twitter:description" content="امکان ارسال انواع صورتحساب الکترونیکی نوع اول و نوع دوم به سامانه مودیان در سامانه فاکتورین مهیا می باشد. در واقع فاکتورین، رابط شما با سامانه مودیان است. ">
     <meta name="twitter:title" content="نرم افزار واسط ارسال صورتحساب الکترونیکی فاکتورین">
-    <meta property="og:image" content="https://factorfive.com/dash-assets/media/logos/CompLogo.png">
+    <meta property="og:image" content="https://factorin.com/dash-assets/media/logos/CompLogo.png">
 
 
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="{{ asset('dash-assets/plugins/global/plugins.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('dash-assets/css/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('dash-assets/css/font.dash.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/new-design.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 
     <!--begin::Fonts-->
@@ -111,35 +112,40 @@
                                     <!--begin::Menu item-->
                                     <div class="menu-item">
                                         <!--begin::Menu link-->
-                                        <a class="menu-link nav-link active py-3 px-4 px-xxl-6" href="{{route('index')}}#kt_body" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">خانه</a>
+                                        <a class="menu-link nav-link active py-3 px-4 px-xxl-6" @if (request()->is('/')) href="#kt_body" @else href="{{route('index')}}#kt_body" @endif data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">خانه</a>
                                         <!--end::Menu link-->
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item">
                                         <!--begin::Menu link-->
-                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="{{route('index')}}#how-it-works" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">سازوکار</a>
+                                        <a class="menu-link nav-link py-3  px-4 px-xxl-6  @if(request()->routeIs('academy.index')) active @endif "  href="{{route('academy.index')}}"  data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">آموزش</a>
+                                        <!--end::Menu link-->
+                                    </div>
+                                    <div class="menu-item">
+                                        <!--begin::Menu link-->
+                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" @if (request()->is('/')) href="#how-it-works" @else href="{{route('index')}}#how-it-works" @endif data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">سازوکار</a>
                                         <!--end::Menu link-->
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item">
                                         <!--begin::Menu link-->
-                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="{{route('index')}}#kt_pricing" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">تعرفه ها</a>
+                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" @if (request()->is('/')) href="#kt_pricing" @else href="{{route('index')}}#kt_pricing" @endif data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">تعرفه ها</a>
                                         <!--end::Menu link-->
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item">
                                         <!--begin::Menu link-->
-                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="{{route('csr.index')}}" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">تولید csr آنلاین</a>
+                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="{{route('csr.index')}}" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">تولید کلید ها و csr</a>
                                         <!--end::Menu link-->
                                     </div>
                                     <!--end::Menu item-->
                                     <!--begin::Menu item-->
                                     <div class="menu-item">
                                         <!--begin::Menu link-->
-                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="{{route('index')}}#contactus" data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">تماس با ما</a>
+                                        <a class="menu-link nav-link py-3 px-4 px-xxl-6" @if (request()->is('/')) href="#contactus" @else href="{{route('index')}}#contactus" @endif data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">تماس با ما</a>
                                         <!--end::Menu link-->
                                     </div>
                                     <!--end::Menu item-->
@@ -220,7 +226,7 @@
                             <!--end::Title-->
                             <!--begin::Text-->
                             <span class="fw-normal fs-4 text-gray-400">مشاهده
-									<a href="https://factorfive.com/blog/%D8%B5%D9%81%D8%B1_%D8%AA%D8%A7_%D8%B5%D8%AF_%D8%A7%D8%B1%D8%B3%D8%A7%D9%84_%D8%B5%D9%88%D8%B1%D8%AA%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A8%D9%87_%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87_%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86" class="text-white opacity-50 text-hover-primary">راهنمای ثبت نام و ثبت فاکتور</a></span>
+									<a href="https://factorin.ir/blog/%D8%B5%D9%81%D8%B1_%D8%AA%D8%A7_%D8%B5%D8%AF_%D8%A7%D8%B1%D8%B3%D8%A7%D9%84_%D8%B5%D9%88%D8%B1%D8%AA%D8%AD%D8%B3%D8%A7%D8%A8_%D8%A8%D9%87_%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87_%D9%85%D9%88%D8%AF%DB%8C%D8%A7%D9%86" class="text-white opacity-50 text-hover-primary">راهنمای ثبت نام و ثبت فاکتور</a></span>
                             <!--end::Text-->
                         </div>
                         <!--end::Block-->
@@ -270,7 +276,7 @@
                                 </a>
                                 <!--end::Link-->
                                 <!--begin::Link-->
-                                <a href="https://www.instagram.com/factorfive.tax/profilecard/?igsh=cTFwcDlhczBoY3pp" class="mb-6">
+                                <a href="https://www.instagram.com/factorin.tax/profilecard/?igsh=cTFwcDlhczBoY3pp" class="mb-6">
                                     <img src="{{asset('dash-assets/media/svg/brand-logos/instagram-2-1.svg')}}" class="h-20px me-2" alt="instagram" />
                                     <span class="text-white opacity-50 text-hover-primary fs-5 mb-6">اینستاگرام</span>
                                 </a>
@@ -282,7 +288,7 @@
                                 </a>
                                 <!--end::Link-->
                                 <!--begin::Link-->
-                                <a href="https://www.aparat.com/factorfive.com" class="mb-6">
+                                <a href="https://www.aparat.com/factorin.ir" class="mb-6">
                                     <img src="{{asset('dash-assets/media/svg/brand-logos/youtube-3.svg')}}" class="h-20px me-2" alt="aparat" />
                                     <span class="text-white opacity-50 text-hover-primary fs-5 mb-6">آپارات</span>
                                 </a>
@@ -346,7 +352,7 @@
                     <!--begin::Copyright-->
                     <div class="d-flex align-items-center order-2 order-md-1">
                         <!--begin::Logo-->
-                        <a href="https://factorfive.ir">
+                        <a href="https://factorin.ir">
                             <img alt="Logo" src="{{asset('dash-assets/media/logos/CompLogo.png')}}" class="h-100px h-md-80px" />
                         </a>
                         <!--end::Logo image-->

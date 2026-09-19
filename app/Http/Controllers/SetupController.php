@@ -28,6 +28,7 @@ class SetupController extends Controller
     const VERSION_1_9 = 1.9;
     const VERSION_2_0 = 2.0;
     const VERSION_2_1 = 2.1;
+    const VERSION_2_2 = 2.2;
 
     public function init(){
         $last_version = env('APP_VERSION');
@@ -50,6 +51,7 @@ class SetupController extends Controller
         if (self::VERSION_1_9 > $this->getInstalledVersion()) $this->install_1_9();
         if (self::VERSION_2_0 > $this->getInstalledVersion()) $this->install_2_0();
         if (self::VERSION_2_1 > $this->getInstalledVersion()) $this->install_2_1();
+        if (self::VERSION_2_2 > $this->getInstalledVersion()) $this->install_2_2();
 
 
 
@@ -171,5 +173,12 @@ class SetupController extends Controller
         Artisan::call("view:clear");
         Artisan::call("cache:clear");
         $this->setInstalledVersion(self::VERSION_2_1);
+    }
+
+    private function install_2_2(){
+        Artisan::call("migrate");
+        Artisan::call("view:clear");
+        Artisan::call("cache:clear");
+        $this->setInstalledVersion(self::VERSION_2_2);
     }
 }

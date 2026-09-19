@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AcademyController;
+use App\Http\Controllers\AdminAcademyController;
 use App\Http\Controllers\AdminDiscountController;
 use App\Http\Controllers\AdminFAQController;
 use App\Http\Controllers\AdminPackageController;
@@ -50,6 +52,8 @@ Route::group(['middleware' => ['web', 'https', 'visitlog', 'convert_numbers', 'f
     Route::get('/', [LandingController::class, 'index'])->name('index');
     Route::post('/ContactUs', [LandingController::class, 'storeContactForm'])->name('index.contactus');
     Route::get('/blog', [SubLandingController::class, 'index'])->name('blog.index');
+    Route::get('/academy', [AcademyController::class, 'index'])->name('academy.index');
+    Route::get('/academy/item/{id}/{title}', [AcademyController::class, 'item'])->name('academy.item');
     Route::get('/blogCategory', [SubLandingController::class, 'ctegoricalindex'])->name('blog.ctegoricalindex');
     Route::get('/blog/{slug}', [SubLandingController::class, 'show'])->name('blog.show');
     Route::get('/AboutUs', [SubLandingController::class, 'indexAboutUs'])->name('aboutUs');
@@ -207,6 +211,12 @@ Route::group(['middleware' => ['web', 'https', 'visitlog', 'convert_numbers', 'f
     Route::get('/public-package/index', [AdminPackageController::class, 'publicIndex'])->name('public-package.index');
     Route::post('/package/insert', [AdminPackageController::class, 'insert'])->name('package.insert');
     Route::get('/package/delete/{type}/{id}', [AdminPackageController::class, 'delete'])->name('package.delete');
+
+    //academy
+    Route::get('/admin/academy/index', [AdminAcademyController::class, 'index'])->name('admin.academy.index');
+    Route::post('/admin/academy/insert', [AdminAcademyController::class, 'insert'])->name('admin.academy.insert');
+    Route::post('/admin/academy/delete', [AdminAcademyController::class, 'delete'])->name('admin.academy.delete');
+    Route::post('/admin/academy/update', [AdminAcademyController::class, 'update'])->name('admin.academy.update');
 
     Route::group(['prefix'=>'user','middleware'=>['web', 'auth','PreventBackHistory']], function (){
         Route::get('tickets/ongoing', [UserTicketController::class,'TicketsOngoingIndex'])->name('UserTickets.TicketsOngoingIndex');

@@ -128,22 +128,22 @@
                                 <!--begin::Icons-->
                                 <div class="d-flex flex-center">
                                     <!--begin::Icon-->
-                                    <a href="https://ble.ir/karposhe_com" class="mx-4">
+                                    <a href="https://ble.ir/factorin" class="mx-4">
                                         <img src="https://karposhe.com/dash-assets/media/svg/brand-logos/bale.svg" class="h-20px my-2" alt="بله">
                                     </a>
                                     <!--end::Icon-->
                                     <!--begin::Icon-->
-                                    <a href="https://www.aparat.com/karposhe.com" class="mx-4">
+                                    <a href="https://www.aparat.com/factorin.ir" class="mx-4">
                                         <img src="https://karposhe.com/dash-assets/media/svg/brand-logos/aparat.svg" class="h-30px my-2" alt="">
                                     </a>
                                     <!--end::Icon-->
                                     <!--begin::Icon-->
-                                    <a href="https://www.instagram.com/karposhe.tax/profilecard/?igsh=cTFwcDlhczBoY3pp" class="mx-4">
+                                    <a href="" class="mx-4">
                                         <img src="https://karposhe.com/dash-assets/media/svg/brand-logos/instagram-2-1.svg" class="h-20px my-2" alt="">
                                     </a>
                                     <!--end::Icon-->
                                     <!--begin::Icon-->
-                                    <a href="https://t.me/karposhe_com" class="mx-4">
+                                    <a href="https://t.me/factorin" class="mx-4">
                                         <img src="https://karposhe.com/dash-assets/media/svg/brand-logos/telegram.png" class="h-25px my-2" alt="">
                                     </a>
                                     <!--end::Icon-->
